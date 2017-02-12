@@ -2,6 +2,7 @@ doctype html
 html
     head
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     script(src="https://code.jquery.com/jquery-3.1.0.js")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
@@ -19,7 +20,7 @@ body
         nav.navbar
             div.container-fluid
                 div.navbar-header
-                    a(href="#").navbar-brand My home work
+                    a(href="#").navbar-brand Моя домашняя работа
                 ul.nav.navbar-nav
                     li.dropdown
                         a(href="#" data-toggle="dropdown").dropdown-toggle Class 1-4
@@ -260,8 +261,19 @@ body
                                 a(href="#") Russkiy jazyk
                             li
                                 a(href="#") Himija
+                    li.dropdown
+                        a(href="#" data-toggle="dropdown").dropdown-toggle Perevodi
+                            span.caret
+                        ul.dropdown-menu
+                            li
+                                a(href="#") 8 class
+                            li
+                                a(href="#") 9 class
+                            li
+                                a(href="#") 10 class
+                            li
+                                a(href="#") 11 class
+    div.title The Best Home Work Ever!!!
 block content
 
-
-
-
+include ./footer.jade

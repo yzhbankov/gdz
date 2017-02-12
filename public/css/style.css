@@ -1,86 +1,21 @@
 body {
+    background-image: url("../img/background.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-
-.board {
-    margin-top: 60px;
-    height: 300px;
-    background-color: #007bb6;
-    text-align: center;
-    font-size: 50px;
-    color: white;
+.navbar{
+    background-color: white;
 }
-
-.title {
-    font-size: 100px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    padding-top: 40px;
-}
-.section-title{
-    font-size: 50px;
-    margin-left: 20%;
-    margin-top: 100px;
-    margin-bottom: 50px;
-}
-.features{
-    border-width: 0;
-    color: #007bb6;
-    font-size: 20px;
-}
-.footer {
-    text-align: center;
-    position: relative;
-    margin-top: 50px;
-}
-
-.signup {
-    margin-top: 60px;
-    text-align: center;
-    width:600px;
-}
-.signup button{
-    width:400px
-}
-
-.signup-title {
-    text-align: center;
-}
-.book{
-    display: inline-block;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-.trade-btn{
-    font-size: 13px;
-    margin-left: -55px;
+.footer{
     position: absolute;
-    float: right;
+    bottom:0;
 }
-.center{
+
+.title{
+    font-size: 80px;
+    color: white;
     text-align: center;
-}
-.tradeRequest{
-    margin-right: 10px;
-}
-.tradeContainer{
-    margin-top: 20px;
-}
-.signinfield{
-    margin-bottom: 40px;
-    margin-top: 20px;
-}
-.options-submit{
-    text-align: center;
-}
-#myChart{
-    width: 400px;!important;
-    height: 400px;!important;
-}
-.signbtn{
-    margin-top: 200px;
-    text-align: center;
-    font-size: 60px;
-    margin-left: 10px;
-    margin-right: 10px;
+    font-family: cursive;
 }

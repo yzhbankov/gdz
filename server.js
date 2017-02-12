@@ -6,8 +6,10 @@ app = express();
 var MongoClient = require('mongodb').MongoClient;
 //var url = 'mongodb://yzhbankov:password1360@ds157248.mlab.com:57248/heroku_8l7mbnvd';
 var url = 'mongodb://localhost:27017/gdz';
+var bodyParser = require('body-parser');
 
 app.use("/", express.static('public'));
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
