@@ -19,6 +19,7 @@
   "homepage": "https://github.com/yzhbankov/gdz#readme",
   "dependencies": {
     "express": "^4.14.1",
+    "jade": "^1.11.0",
     "mongodb": "^2.2.22"
   }
 }
