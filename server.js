@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
     fs.readFile(path.join(__dirname, '/public', 'db/data.json'), function (err, data) {
         obj = JSON.parse(data);
     });
-    res.render('index.jade');
+    res.render('title.jade');
 });
 
 app.get('/:class/:predmet', function(req, res){
@@ -56,14 +56,14 @@ app.get('/:class/:predmet', function(req, res){
  });
  });*/
 app.get('/:class/:predmet/:url', function(req, res){
-
+var content = '';
     obj.forEach(function (item, index) {
         if (item.urlObject['titleUrl'] == req.params.url) {
-            console.log(item['htmlText']);
-            res.render('book.jade', {
-                "content": item['htmlText']
-            });
+            content = item['htmlText'];
         }
+    });
+    res.render('book.jade', {
+        "content": content
     });
 });
 
