@@ -8,6 +8,8 @@ var fs = require('fs');
 var bodyParser = require('body-parser');
 
 app.use(bodyParser());
+app.use(bodyParser.text({defaultCharset: 'utf-8'}));
+
 app.use("/", express.static('public'));
 app.use("/:class/:predmet", express.static('public'));
 app.use("/:class/:predmet/:url", express.static('public'));
@@ -57,6 +59,7 @@ app.get('/:class/:predmet/:url', function(req, res){
 
     obj.forEach(function (item, index) {
         if (item.urlObject['titleUrl'] == req.params.url) {
+            console.log(item['htmlText']);
             res.render('book.jade', {
                 "content": item['htmlText']
             });

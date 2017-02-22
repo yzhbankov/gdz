@@ -94,12 +94,12 @@ handledArr = handledArr.map(function(item){
 });*/
 
 
-/*$('a').each(function(){
+$('').each(function(){
     var same = this;
     $(this).click(function(e) {
         e.preventDefault();
         var hr = $(same).attr("href");
         $( ".imageContainer" ).find('img').remove();
-        $('<img>').attr('src', 'http://localhost:3000/gdz' + hr).appendTo($(".imageContainer"))
+        $('<img>').attr('src', 'http://localhost:3000/' + hr).appendTo($(".imageContainer"))
     })
-});*/
+});
