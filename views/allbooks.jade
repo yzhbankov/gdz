@@ -5,7 +5,7 @@ doctype html
 extends ./index.jade
 block append content
    div
-      h2(style='text-align:center; color:white') Все книги дисциплины
+      h2(style='text-align:center') #{pageTitle}
     div.container
        - if (titles.length)
        -for (var i = 0; i < titles.length; i++)

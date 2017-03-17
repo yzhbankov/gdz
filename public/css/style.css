@@ -1,6 +1,6 @@
 body {
     font-family: Tahoma, Arial, Helvetica, sans-serif;
-    background-image: url("../img/background.png");
+    background-color: ghostwhite;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8,7 +8,8 @@ body {
     background-attachment:fixed;
 }
 .navbar{
-    background-color: white;
+    background-color: black;
+    color: white;
 }
 .footer{
     margin-top: 20px;
@@ -16,14 +17,32 @@ body {
 }
 
 .title{
-    font-size: 80px;
-    color: white;
+    font-size: 60px;
     text-align: center;
-    font-family: cursive;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+}
+.title-img{
+    text-align: center;
+}
+
+.all-disciplines{
+    text-align: center;
 }
 
 .klass{
-    color: #fffea9;
+    color: black;
+}
 
+.description{
+    text-indent: 1.5em;
+    text-align: justify;
+    margin-top: 40px;
+    padding-top: 20px;
+    background-color: white;
+    box-shadow: -1px -1px 27px 0px #000000;
+}
+.contain{
+    background-color: white;
+    box-shadow: -1px -1px 27px 0px #000000;
+    padding-bottom: 30px;
 }
