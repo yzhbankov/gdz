@@ -10,7 +10,6 @@ var disciplineTitles = require('./public/db/discipline-titles-data');
 
 app.use(bodyParser());
 app.use(bodyParser.text({defaultCharset: 'utf-8'}));
-
 app.use("/", express.static('public'));
 app.use("/:class/:predmet", express.static('public'));
 app.use("/:class/:predmet/:url", express.static('public'));
@@ -22,23 +21,19 @@ app.set('view engine', 'jade');
 app.get('/', function (req, res) {
     fs.readFile(path.join(__dirname, '/public', 'db/data.json'), function (err, data) {
         obj = JSON.parse(data);
-        console.log(obj[0]);
     });
-
     res.render('title.jade');
 });
 
-app.get('/:class/:predmet', function(req, res){
+app.get('/:class/:predmet', function (req, res) {
     var titles = [];
     var urls = [];
     var discipline = req.params.predmet;
-
-    //var disciplineTitles = JSON.parse(fs.readFile(path.join(__dirname, '/public', 'db/discipline-titles-data.js.json'), 'utf8'));
-
     obj.forEach(function (item, index) {
-        if ((item.urlObject['class'] == req.params.class)&&(item.urlObject['bookTitle'] == req.params.predmet)) {
-            if (item.title==null){
-                titles.push(item.urlObject['bookTitle']);} else{
+        if ((item.urlObject['class'] == req.params.class) && (item.urlObject['bookTitle'] == req.params.predmet)) {
+            if (item.title == null) {
+                titles.push(item.urlObject['bookTitle']);
+            } else {
                 titles.push(item.title);
             }
             urls.push(item.urlObject['titleUrl']);
@@ -51,27 +46,12 @@ app.get('/:class/:predmet', function(req, res){
         "pageTitle": disciplineTitles[discipline]
     });
 });
-/*app.get('/:class', function(req, res){
- var titles = [];
- var urls = [];
- obj.forEach(function (item, index) {
- if (item.urlObject['class'] == req.params.class) {
- titles.push(item.urlObject['bookTitle']);
- urls.push(item.urlObject['titleUrl']);
- }
- });
- res.render('allbooks.jade', {
- "klass": req.params.class,
- "titles": titles,
- "urls": urls
- });
- });*/
-app.get('/:class/:predmet/:url', function(req, res){
+
+app.get('/:class/:predmet/:url', function (req, res) {
     var content = '';
     obj.forEach(function (item, index) {
         if (item.urlObject['titleUrl'] == req.params.url) {
             content = item['htmlText'];
-            console.log(item);
         }
     });
     res.render('book.jade', {
