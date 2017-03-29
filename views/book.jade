@@ -5,8 +5,7 @@ doctype html
 extends ./index.jade
 block append content
     div.imageContainer
-    div
-        h2(style='text-align:center') The book
-    div.container
-        div.book
-           !{content}
+    div.bookHeader
+        !{predmet}
+    div.book.row
+       !{content}

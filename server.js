@@ -49,13 +49,15 @@ app.get('/:class/:predmet', function (req, res) {
 
 app.get('/:class/:predmet/:url', function (req, res) {
     var content = '';
+    var predmet = req.params.predmet;
     obj.forEach(function (item, index) {
         if (item.urlObject['titleUrl'] == req.params.url) {
             content = item['htmlText'];
         }
     });
     res.render('book.jade', {
-        "content": content
+        "content": content,
+        "predmet": predmet
     });
 });
 
