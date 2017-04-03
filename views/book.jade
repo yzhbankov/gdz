@@ -4,8 +4,18 @@
 doctype html
 extends ./index.jade
 block append content
-    div.imageContainer
+    div.imagePreviewer
+        div.imagePreviewerContent
+            div.imagePreviewerContentControl
+                div.prevImage
+                    a(href="#") <
+                div.nextImage
+                    a(href="#") >
+                div.closeImagePrevBtn
+                    a(href="#") X
+            div.imagePreviewerTitle Домашнее задание
+            div.imagePreviewerImage
     div.bookHeader
         !{predmet}
     div.book.row
-       !{content}
+        !{content}

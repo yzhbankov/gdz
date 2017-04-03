@@ -5,35 +5,38 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-attachment:fixed;
+    background-attachment: fixed;
 }
-.navbar{
+
+.navbar {
     background-color: black;
     color: white;
 }
-.footer{
+
+.footer {
     margin-top: 20px;
-    bottom:0;
+    bottom: 0;
 }
 
-.title{
+.title {
     font-size: 60px;
     text-align: center;
     margin-bottom: 10px;
 }
-.title-img{
+
+.title-img {
     text-align: center;
 }
 
-.all-disciplines{
+.all-disciplines {
     text-align: center;
 }
 
-.klass{
+.klass {
     color: black;
 }
 
-.description{
+.description {
     text-indent: 1.5em;
     text-align: justify;
     margin-top: 40px;
@@ -41,14 +44,75 @@ body {
     background-color: white;
     box-shadow: -1px -1px 27px 0px #000000;
 }
-.contain{
+
+.contain {
     background-color: white;
     box-shadow: -1px -1px 27px 0px #000000;
     padding-bottom: 30px;
 }
 
-.bookHeader{
+.bookHeader {
     font-size: 30px;
     margin-bottom: 10px;
+    text-align: center;
+}
+
+.imagePreviewer {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.imagePreviewerContent {
+    background-color: #fefefe;
+    margin: 200px auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.imagePreviewerContentControl {
+    font-size: 20px;
+    display: block;
+}
+
+.imagePreviewerContentControl a:link a:visited a:hover a:active{
+    color: black;
+    text-decoration: none;
+}
+
+.closeImagePrevBtn {
+    float: left;
+    font-weight: 500;
+
+}
+
+.nextImage {
+    float: left;
+    display: block;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.prevImage {
+    margin-left: 90%;
+    margin-right: 10px;
+    float: left;
+    font-weight: 500;
+}
+
+.imagePreviewerTitle {
+    text-align: center;
+}
+
+.imagePreviewerImage{
     text-align: center;
 }
