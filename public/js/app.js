@@ -21,7 +21,7 @@ function getElementBySelector(selector, index) {
 function imageAppend(selector, index) {
     var elementUrl = $(getElementBySelector(selector, index)).attr("href");
     $(".imagePreviewerImage").find('img').remove();
-    $('<img>').attr('src', 'http://localhost:3000/' + elementUrl).appendTo($(".imagePreviewerImage"))
+    $('<img>').attr('src', 'http://localhost:3000/gdz_new/public' + elementUrl).appendTo($(".imagePreviewerImage"))
 }
 
 getElementBySelector('a[rel]').each(function (index, element) {

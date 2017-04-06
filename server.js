@@ -40,6 +40,7 @@ app.get('/:class/:predmet', function (req, res) {
         }
     });
     res.render('allbooks.jade', {
+        "predmet": discipline,
         "klass": req.params.class,
         "titles": titles,
         "urls": urls,
@@ -49,15 +50,16 @@ app.get('/:class/:predmet', function (req, res) {
 
 app.get('/:class/:predmet/:url', function (req, res) {
     var content = '';
-    var predmet = req.params.predmet;
+    var bookTitle = '';
     obj.forEach(function (item, index) {
         if (item.urlObject['titleUrl'] == req.params.url) {
             content = item['htmlText'];
+            bookTitle = item['title'];
         }
     });
     res.render('book.jade', {
         "content": content,
-        "predmet": predmet
+        "bookTitle": bookTitle
     });
 });
 
